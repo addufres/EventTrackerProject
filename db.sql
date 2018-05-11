@@ -24,9 +24,9 @@ DROP TABLE IF EXISTS `eventtrackerdb`.`event` ;
 
 CREATE TABLE IF NOT EXISTS `eventtrackerdb`.`event` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `price` DECIMAL(2,0) NOT NULL,
-  `gallons` DECIMAL(2,0) NOT NULL,
-  `distance` DECIMAL(2,0) NOT NULL,
+  `price` DECIMAL(2,2) NOT NULL,
+  `gallons` DECIMAL(2,2) NOT NULL,
+  `distance` DECIMAL(3,2) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
