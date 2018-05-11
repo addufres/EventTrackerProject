@@ -55,7 +55,7 @@ public class Event {
 		this.gallons = gallons;
 		this.distance = distance;
 	}
-	
+	public Event() {}
 	
 	
 }
