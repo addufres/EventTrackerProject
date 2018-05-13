@@ -14,6 +14,9 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'war'
+
+
 
 group = 'com.skilldistillery'
 version = '0.0.1-SNAPSHOT'
@@ -38,4 +41,12 @@ dependencies {
         'org.junit.vintage:junit-vintage-engine:4.12.1',
         'org.junit.platform:junit-platform-launcher:1.0.1',
         'org.junit.platform:junit-platform-runner:1.0.1')
+   	// WAR STUFF
+   	providedRuntime ('org.springframework.boot:spring-boot-starter-tomcat')
+}
+
+war {
+	enabled = true
+  	archiveName = "{EventTrackerProject}.war"
+  	destinationDir = file("/war")
 }
