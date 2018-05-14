@@ -1,2 +1,11 @@
 /.metadata/
 /.recommenders/
+.DS_Store
+target
+build
+bin
+.metadata
+.gradle
+Servers
+.settings
+.recommenders
