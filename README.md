@@ -4,7 +4,7 @@
 ## EventTrackerProject Overview
 This is a basic gas tracker application that can be used to track miles and money
 spent on gas as well as display a calculated miles per gallon value for the
-entered event. To access this application travel to andrewddufresne.com:8080/EventTrackerProject
+entered event. To access this application travel to andrewddufresne.com:8080/GasTrackerApp/api/events
 
 ## Technologies Used
   * MySQL

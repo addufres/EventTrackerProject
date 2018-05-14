@@ -17,7 +17,7 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: 'war'
 war {
 	enabled = true
-  	archiveName = "{EventTrackerProject}.war"
+  	archiveName = "GasTrackerApp.war"
   	
 }
 
