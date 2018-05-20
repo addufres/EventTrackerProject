@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MPG Tracker</title>
+<script type="text/javascript" src="js/mpgFunction2.js"></script>
+</head>
+<body>
+  <h1>Welcome to Moneys Per Gallon Tracker</h1>
+
+  <form name="tankForm">
+    <input type="number" name="tankId">
+    <button name="lookup" value="1">Get Tank by Id</button>
+    <button name="lookupAll">Get All Tanks</button>
+  </form>
+  <form name="deleteForm">
+  	<input type="number" name="tankId">
+  	<button name="submit">Delete Tank by Id</button>
+  </form>
+  <div id="output">  
+    <div id="searchData"></div>
+    <div id="tankData"></div>
+    <div id="aggData"></div>
+    <div id="updateData"></div>
+  </div>
+  <form name="addTankForm">
+    <input type="number" name="price" value="2.50">
+    <input type="number" name="gallons" value="13">
+    <input type="number" name="distance" value="250">
+    <button type="submit" name="addTank">Add Tank of Gas</button>
+  </form>
+	
+</body>
+</html>

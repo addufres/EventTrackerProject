@@ -31,6 +31,7 @@ public class EventServiceImpl implements EventService {
 	    e.setPrice(jsonEvent.getPrice());
 	    e.setGallons(jsonEvent.getGallons());
 	    e.setDistance(jsonEvent.getDistance());
+	    repo.saveAndFlush(e);
 	    return e;
 	}
 		
@@ -46,6 +47,7 @@ public class EventServiceImpl implements EventService {
 		if (jsonEvent.getDistance() != 0) {
 			e.setDistance(jsonEvent.getDistance());
 		}
+		repo.saveAndFlush(e);
 		return e;
     }
 
