@@ -4,7 +4,8 @@
 ## EventTrackerProject Overview
 This is a basic gas tracker application that can be used to track miles and money
 spent on gas as well as display a calculated miles per gallon value for the
-entered event. To access this application travel to andrewddufresne.com:8080/EventTrackerREST/index.html
+entered event. To access this application travel to
+http://18.221.108.122:8080/EventTrackerREST/index.html
 
 The web app must be able to: Perform C.R.U.D. actions and display the information to the user.
 
