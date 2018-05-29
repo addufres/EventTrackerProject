@@ -3,6 +3,7 @@ package com.skilldistillery.eventtracker.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.skilldistillery.eventtracker.Event;
 import com.skilldistillery.eventtracker.service.EventService;
 
+//Configures the app to accept all traffic from 4200 because
+//Angular runs on a separate server (port 4200)
+@CrossOrigin({ "*", "http://localhost:4200" })
 @RestController
 @RequestMapping("api")
 public class EventController {

@@ -1,0 +1,46 @@
+<h1>Welcome To {{title}}</h1>
+<h1> <span class="badge badge-pill badge-dark">{{getNumTanks()}} Tanks of Gas</span></h1>
+<!-- Show all tanks -->
+<table *ngIf="!selected" class="table table-striped table-dark table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th>Money Spent</th>
+      <th>Gallons Bought</th>
+      <th>Distance Traveled</th>
+    </tr>
+  </thead>
+  <tbody scope="tbody-light">
+    <tr *ngFor="let tank of tanks" scope="row">
+      <td (click)="selected=tank">${{tank.price}}</td>
+      <td (click)="selected=tank">{{tank.gallons}}</td>
+      <td (click)="selected=tank">{{tank.distance}}</td>
+      <td><button (click)="deleteTank(tank.id)" class="btn btn-danger">Delete</button><td></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<!-- Detail View -->
+<div *ngIf="selected && !editTank">
+  <h4>ID: {{selected.id}}</h4>
+  <p>Price: ${{selected.price}}</p>
+  <p>Gallons: {{selected.gallons}}</p>
+  <p>Distance: {{selected.distance}}</p>
+  <button class="btn btn-primary"(click)="setEditTodo()">Edit</button>
+  <button class="btn btn-warning"(click)="displayTable()">Back</button>
+</div>
+<!-- Create Form -->
+<form *ngIf="!selected">
+  <div class="row"><input type="text" name="price" placeholder="Price" [(ngModel)]="tank.price"/></div>
+  <div class="row"><input type="text" name="gallons" placeholder="Gallons" [(ngModel)]="tank.gallons"/></div>
+  <div class="row"><input type="text" name="distance" placeholder="Distance" [(ngModel)]="tank.distance"/></div>
+  <div class="row"><input class="btn btn-success" type="submit" (click)="addTank()"/></div>
+</form>
+<!-- Edit Form -->
+<form *ngIf="editTank">
+  <input type="text" name = "price" placeholder="Price" [(ngModel)]="editTank.price"/>
+  <input type="text" name="gallons" placeholder="Gallons" [(ngModel)]="editTank.gallons"/>
+  <input type="text" name="distance" placeholder="Distance" [(ngModel)]="editTank.distance"/>
+
+  <button class="btn-success" (click)="updateTodo(editTank)">Save</button>
+  <button class="btn btw-warning" (click)="hideEditView()">Cancel</button>
+</form>
