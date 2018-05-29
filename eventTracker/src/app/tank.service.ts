@@ -8,7 +8,8 @@ import { catchError, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class TankService {
-  private url = 'http://localhost:8080/api/events';
+  private baseUrl = '/EventTrackerREST/';
+  private url = this.baseUrl + 'api/events';
 
   index() {
     return this.http.get<Tank[]>(this.url)

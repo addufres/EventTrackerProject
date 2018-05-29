@@ -11,7 +11,7 @@
   </thead>
   <tbody scope="tbody-light">
     <tr *ngFor="let tank of tanks" scope="row">
-      <td (click)="selected=tank">${{tank.price}}</td>
+      <td (click)="selected=tank">{{tank.price | currency}}</td>
       <td (click)="selected=tank">{{tank.gallons}}</td>
       <td (click)="selected=tank">{{tank.distance}}</td>
       <td><button (click)="deleteTank(tank.id)" class="btn btn-danger">Delete</button><td></td>
@@ -22,7 +22,7 @@
 <!-- Detail View -->
 <div *ngIf="selected && !editTank">
   <h4>ID: {{selected.id}}</h4>
-  <p>Price: ${{selected.price}}</p>
+  <p>Price: {{selected.price | currency }}</p>
   <p>Gallons: {{selected.gallons}}</p>
   <p>Distance: {{selected.distance}}</p>
   <button class="btn btn-primary"(click)="setEditTodo()">Edit</button>
